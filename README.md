@@ -32,6 +32,7 @@ isClick用来约束的，一开始isClick为false，编译后字是黑色的，�
  ![图片加载失败，将显示此文字](https://github.com/Rye10/changetextcolor/blob/master/src/main/res/drawable/3.jpg)
  点击后也无法变色，原因是java从上到下执行顺序问题，只会显示value和list相同项的红色，点击后改变了position和isClick，执行到最后不相等，颜色为黑色<br>
 <br>
+<br>
 2.    if (list.get(position).equals(value)){<br>
                 textView.setTextColor(Color.RED);<br>
             }else {<br>
@@ -42,10 +43,10 @@ isClick用来约束的，一开始isClick为false，编译后字是黑色的，�
             }else {<br>
                 textView.setTextColor(Color.BLACK);<br>
             }<br>
-     ![图片加载失败，将显示此文字](https://github.com/Rye10/changetextcolor/blob/master/src/main/res/drawable/2.jpg)<br>
-     ![图片加载失败，将显示此文字](https://github.com/Rye10/changetextcolor/blob/master/src/main/res/drawable/1.jpg)
+   ![图片加载失败，将显示此文字](https://github.com/Rye10/changetextcolor/blob/master/src/main/res/drawable/1.jpg)
      value和list相同项不变红色，编译后为黑色，点击变色，原因也是java执行顺序问题<br>
-     
+     <br>
+     <br>
 3.    if (mCurrentItem==position&&isClick){<br>
                 textView.setTextColor(Color.RED);<br>
             }else {<br>
