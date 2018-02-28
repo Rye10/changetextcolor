@@ -18,43 +18,42 @@ isClick用来约束的，一开始isClick为false，编译后字是黑色的，�
 每次一点击，先重置，全部恢复到黑色状态，如何点击哪个，哪个设置为改变的颜色
 <br>
 <br>
-实现中的错误记录
-----
-1.   if (mCurrentItem==position&&isClick){                          
-                textView.setTextColor(Color.RED);
-            }else {
-                textView.setTextColor(Color.BLACK);
-            }
-            if (list.get(position).equals(value)){
-                textView.setTextColor(Color.RED);
-            }else {
-                textView.setTextColor(Color.BLACK);
-            }
+实现中的错误记录<br>
+1.   if (mCurrentItem==position&&isClick){                        <br>  
+                textView.setTextColor(Color.RED);<br>
+            }else {<br>
+                textView.setTextColor(Color.BLACK);<br>
+            }<br>
+            if (list.get(position).equals(value)){<br>
+                textView.setTextColor(Color.RED);<br>
+            }else {<br>
+                textView.setTextColor(Color.BLACK);<br>
+            }<br>
  ![图片加载失败，将显示此文字](https://github.com/Rye10/changetextcolor/blob/master/src/main/res/drawable/3.jpg)
- 点击后也无法变色，原因是java从上到下执行顺序问题，只会显示value和list相同项的红色，点击后改变了position和isClick，执行到最后不相等，颜色为黑色
-
-2.    if (list.get(position).equals(value)){
-                textView.setTextColor(Color.RED);
-            }else {
-                textView.setTextColor(Color.BLACK);
-            }
-            if (mCurrentItem==position&&isClick){                          
-                textView.setTextColor(Color.RED);
-            }else {
-                textView.setTextColor(Color.BLACK);
-            }
+ 点击后也无法变色，原因是java从上到下执行顺序问题，只会显示value和list相同项的红色，点击后改变了position和isClick，执行到最后不相等，颜色为黑色<br>
+<br>
+2.    if (list.get(position).equals(value)){<br>
+                textView.setTextColor(Color.RED);<br>
+            }else {<br>
+                textView.setTextColor(Color.BLACK);<br>
+            }<br>
+            if (mCurrentItem==position&&isClick){   <br>                       
+                textView.setTextColor(Color.RED);<br>
+            }else {<br>
+                textView.setTextColor(Color.BLACK);<br>
+            }<br>
      ![图片加载失败，将显示此文字](https://github.com/Rye10/changetextcolor/blob/master/src/main/res/drawable/2.jpg)
      ![图片加载失败，将显示此文字](https://github.com/Rye10/changetextcolor/blob/master/src/main/res/drawable/1.jpg)
-     value和list相同项不变红色，编译后为黑色，点击变色，原因也是java执行顺序问题
+     value和list相同项不变红色，编译后为黑色，点击变色，原因也是java执行顺序问题<br>
      
-3.    if (mCurrentItem==position&&isClick){
-                textView.setTextColor(Color.RED);
-            }else {
-                textView.setTextColor(Color.BLACK);
-            }
-            if (list.get(position).equals(value)){
-                textView.setTextColor(Color.RED);
-            }
+3.    if (mCurrentItem==position&&isClick){<br>
+                textView.setTextColor(Color.RED);<br>
+            }else {<br>
+                textView.setTextColor(Color.BLACK);<br>
+            }<br>
+            if (list.get(position).equals(value)){<br>
+                textView.setTextColor(Color.RED);<br>
+            }<br>
     ![图片加载失败，将显示此文字](https://github.com/Rye10/changetextcolor/blob/master/src/main/res/drawable/4.jpg)
-    一直保持value和list相同为红色，没有其他约束，点击其他的变色
+    一直保持value和list相同为红色，没有其他约束，点击其他的变色<br>
  
