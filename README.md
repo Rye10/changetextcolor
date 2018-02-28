@@ -42,7 +42,7 @@ isClick用来约束的，一开始isClick为false，编译后字是黑色的，�
             }else {<br>
                 textView.setTextColor(Color.BLACK);<br>
             }<br>
-     ![图片加载失败，将显示此文字](https://github.com/Rye10/changetextcolor/blob/master/src/main/res/drawable/2.jpg)
+     ![图片加载失败，将显示此文字](https://github.com/Rye10/changetextcolor/blob/master/src/main/res/drawable/2.jpg)<br>
      ![图片加载失败，将显示此文字](https://github.com/Rye10/changetextcolor/blob/master/src/main/res/drawable/1.jpg)
      value和list相同项不变红色，编译后为黑色，点击变色，原因也是java执行顺序问题<br>
      
